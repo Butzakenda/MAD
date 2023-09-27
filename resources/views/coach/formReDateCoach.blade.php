@@ -5,7 +5,7 @@
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">Schedule an Appointment</h5>
+            <h5 class="card-title">Re-Schedule an Appointment</h5>
             <form>
                 <div class="row">
                     <div class="col">
