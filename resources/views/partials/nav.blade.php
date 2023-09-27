@@ -15,7 +15,7 @@
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="{{ route('register') }}">Multimedia</a>
+                        <a class="nav-link" style="color: #000;" href="{{ route('multimedia.index') }}">Multimedia</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color: #000;" href="{{ route('register') }}">Appointments</a>
