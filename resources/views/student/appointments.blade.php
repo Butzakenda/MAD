@@ -25,7 +25,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">3</th>
+                    <th scope="row">1</th>
                     <td>Name</td>
                     <td>Learning Way</td>
                     <td>Coach</td>
@@ -47,7 +47,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">3</th>
+                    <th scope="row">2</th>
                     <td>Name</td>
                     <td>Learning Way</td>
                     <td>Coach</td>
