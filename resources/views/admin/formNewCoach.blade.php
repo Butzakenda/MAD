@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+@include('partials.search-bar')
+<div class="d-flex justify-content-center mt-5">
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Create a new Coach</h5>
