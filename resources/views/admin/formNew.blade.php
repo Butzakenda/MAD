@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@include('partials.nav')
-@include('partials.search-bar')
 
-<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+@section('content')
+@include('partials.search-bar')
+<div class="d-flex justify-content-center mt-5">
     <div class="card" style="width: 70%; height: 300px;">
         <div class="card-body text-center">
             <br>

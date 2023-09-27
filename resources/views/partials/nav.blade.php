@@ -14,9 +14,11 @@
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="">Multimedia</a>
-                    </li>
+                @auth
+                <li class="nav-item">
+                        <a class="nav-link" style="color: #000;" href="{{ route('multimedia.index') }}">Multimedia</a>
+                </li>
+                @endauth
                     <li class="nav-item">
                         <a class="nav-link" style="color: #000;" href="">Appointments</a>
                     </li>

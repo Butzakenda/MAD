@@ -11,8 +11,7 @@ class MultimediaController extends Controller
      */
     public function index()
     {
-        //
-        return view ('student.multimedia');
+        return view('student.multimedia');
     }
 
     /**
