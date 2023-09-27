@@ -54,7 +54,7 @@
                             <div class="col-md-8 offset-md-4">
                                 <br>
                                 <label for="">Si aún no tienes una cuenta, regístrate</label>
-                                <button id="btnSingUp" type="submit" class="btn btn-outline-primary mr-auto">{{ __('Sing up') }}</button>
+                                <a id="btnSingUp" href="{{ route('register') }}" class="btn btn-outline-primary mr-auto">{{ __('Sing up') }}</a>
                             </div>
                         </div>
 
