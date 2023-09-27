@@ -6,11 +6,7 @@
     <div class="d-flex justify-content-center mt-2">
         <h1>{{ __('Coachs') }}</h1>
     </div>
-    <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
-        <button type="button" class="btn btn-success">
-            New Coach
-        </button>
-    </div>
+    @include('partials.formNewCoachButton')
     <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
         <table class="table table-striped table-hover border">
             <thead>
