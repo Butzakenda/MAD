@@ -5,6 +5,7 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Create a new Coach</h5>
+            {{Auth::user()->name}}
             <form method="post" action=" {{route('coach.create')}} ">
                 @csrf
                 <div class="row">
