@@ -32,7 +32,7 @@ Auth::routes();
 Route::middleware(['web'])->group(function () {
     // Aquí van las rutas de autenticación
     //Register
-        //Route::post('registro', 'App\Http\Controllers\Auth\RegisterController@create')->name('register');
+        Route::post('registro', 'App\Http\Controllers\Auth\RegisterController@create')->name('register');
     //--------
     //Login
         Route::post('/login', 'Auth\LoginController@login');
