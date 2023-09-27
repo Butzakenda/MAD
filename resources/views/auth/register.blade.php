@@ -21,7 +21,7 @@
                                     <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                        <input id="nameUser"  type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                         @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -52,7 +52,7 @@
 
 
                                     <div class="col-md-6">
-                                        <select class="form-select form-control @error('sex') is-invalid @enderror" aria-label="Default select example" required autofocus>
+                                        <select name="sex" id="sex" class="form-select form-control @error('sex') is-invalid @enderror" aria-label="Default select example" required autofocus>
                                             <option selected>Select your sex</option>
                                             <option value="1">Male</option>
                                             <option value="2">Female</option>
@@ -75,7 +75,7 @@
                                     <label for="carrer" class="col-md-4 col-form-label text-md-end">{{ __('Carrer') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="lastname" type="text" class="form-control @error('carrer') is-invalid @enderror" name="carrer" value="{{ old('carrer') }}" required autocomplete="carrer" autofocus>
+                                        <input id="carrer" type="text" class="form-control @error('carrer') is-invalid @enderror" name="carrer" value="{{ old('carrer') }}" required autocomplete="carrer" autofocus>
 
                                         @error('carrer')
                                         <span class="invalid-feedback" role="alert">
@@ -131,13 +131,12 @@
                                     <label for="language" class="col-md-4 col-form-label text-md-end">{{ __('Language') }}</label>
 
                                     <div class="col-md-4">
-                                        <label><input type="checkbox" id="cbox1" value="1" /> Python</label><br />
-                                        <label><input type="checkbox" id="cbox2" value="1" /> Javascript</label><br />
-                                        <label><input type="checkbox" id="cbox3" value="1" /> C#</label><br />
-                                        <label><input type="checkbox" id="cbox4" value="1" /> Php</label><br />
-                                        <label><input type="checkbox" id="cbox5" value="1" /> Java</label><br />
-                                        <label><input type="checkbox" id="cbox6" value="1" /> Kotlin</label><br />
-                                        <label><input type="checkbox" id="cbox7" value="1" /> Otro</label><br />
+                                        <label><input type="checkbox" name="languages[]" id="cbox1" value="Python" /> Python</label><br />
+                                        <label><input type="checkbox" name="languages[]" id="cbox2" value="Javascript" /> Javascript</label><br />
+                                        <label><input type="checkbox" name="languages[]" id="cbox3" value="C#" /> C#</label><br />
+                                        <label><input type="checkbox" name="languages[]" id="cbox4" value="Php" /> Php</label><br />
+                                        <label><input type="checkbox" name="languages[]" id="cbox5" value="Java" /> Java</label><br />
+                                        <label><input type="checkbox" name="languages[]" id="cbox6" value="Kotlin" /> Kotlin</label><br />
                                     </div>
                                 </div>
                             </div>
@@ -147,9 +146,17 @@
                                     <label for="learning-way" class="col-md-6 col-form-label text-md-end">{{ __('Learning Way') }}</label>
 
                                     <div class="col-md-6">
-                                        <label><input type="checkbox" id="cbox1" value="1" /> Audio-Visual</label><br />
-                                        <label><input type="checkbox" id="cbox1" value="1" /> Audio</label><br />
-                                        <label><input type="checkbox" id="cbox1" value="1" /> Visual</label><br />
+                                        <select name="PreferenciasEducativas" id="PreferenciasEducativas">
+                                            <option value="Audio-Visual">
+                                                Audio Visual
+                                            </option>
+                                            <option value="Audio">
+                                                Audio
+                                            </option>
+                                            <option value="Visual">
+                                               Visual
+                                            </option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
