@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request; 
 use App\Models\Estudiante;
+use App\Models\Lenguaje;
+use Illuminate\Support\Facades\App;
 class RegisterController extends Controller
 {
     /*
@@ -71,23 +73,24 @@ class RegisterController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         } else {
+            /* dd($request); */
             $user = User::create([
-                'name' => $request->input('nameUser'),
+                'name' => $request->input('name'),
                 'email' => $request->input('email'),
                 'password' => Hash::make($request->input('password')),
             ]);
 
             $selectedLanguages = $request->input('languages', []);
             $estudiante = Estudiante::create([
-                'Nombres' => $request->input('nameUser'),
+                'Nombres' => $request->input('name'),
                 'Apellidos' => $request->input('lastname'),
                 'CorreoElectronico' => $request->input('email'),
                 'Sexo' => $request->input('sex'),
-                'PreferenciasEducativas' => $request->input('CorreoElectronicoClienteInput'),
+                'PreferenciasEducativas' => $request->input('PreferenciasEducativas'),
                 'Carrera' => $request->input('carrer'),
                 'user_id' => $user->id, // Asignar el ID del usuario al campo user_id
             ]);
-            $estudiante->languages()->sync($selectedLanguages);
+            $estudiante->Lenguaje()->sync($selectedLanguages);
         }
 
         return view('auth.login');
