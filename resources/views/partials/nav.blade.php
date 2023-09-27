@@ -21,7 +21,7 @@
                         <a class="nav-link" style="color: #000;" href="{{ route('register') }}">Appointments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="{{ route('login') }}">Coachs</a>
+                        <a class="nav-link" style="color: #000;" href="{{ route('coach.index') }}">Coachs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color: #000;" href="{{ route('login') }}">Recomendations</a>
