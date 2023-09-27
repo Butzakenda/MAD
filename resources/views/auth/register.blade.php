@@ -129,15 +129,27 @@
                                 <!-- INPUT CHECKBOX  -->
                                 <div>
                                     <label for="language" class="col-md-4 col-form-label text-md-end">{{ __('Language') }}</label>
-
-                                    <div class="col-md-4">
-                                        <label><input type="checkbox" name="languages[]" id="cbox1" value="Python" /> Python</label><br />
-                                        <label><input type="checkbox" name="languages[]" id="cbox2" value="Javascript" /> Javascript</label><br />
-                                        <label><input type="checkbox" name="languages[]" id="cbox3" value="C#" /> C#</label><br />
-                                        <label><input type="checkbox" name="languages[]" id="cbox4" value="Php" /> Php</label><br />
-                                        <label><input type="checkbox" name="languages[]" id="cbox5" value="Java" /> Java</label><br />
-                                        <label><input type="checkbox" name="languages[]" id="cbox6" value="Kotlin" /> Kotlin</label><br />
-                                    </div>
+                                    <select name="lenguajes" id="lenguajes">
+                                        <option value="Python">
+                                        Python
+                                        </option>
+                                        <option value="Javascript">
+                                        Javascript
+                                        </option>
+                                        <option value="C#">
+                                        C#
+                                        </option>
+                                        <option value="Php">
+                                        Php
+                                        </option>
+                                        <option value="Java">
+                                        Java
+                                        </option>
+                                        <option value="Kotlin">
+                                        Kotlin
+                                        </option>
+                                    </select>
+                                    
                                 </div>
                             </div>
                             <div class="col-md-3">

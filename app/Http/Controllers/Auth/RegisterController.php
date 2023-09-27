@@ -88,9 +88,10 @@ class RegisterController extends Controller
                 'Sexo' => $request->input('sex'),
                 'PreferenciasEducativas' => $request->input('PreferenciasEducativas'),
                 'Carrera' => $request->input('carrer'),
+                'Lenguaje' => $request->input('lenguajes'),
                 'user_id' => $user->id, // Asignar el ID del usuario al campo user_id
             ]);
-            $estudiante->Lenguaje()->sync($selectedLanguages);
+            
         }
 
         return view('auth.login');
