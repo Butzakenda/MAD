@@ -15,10 +15,10 @@
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="{{ route('register') }}">Multimedia</a>
+                        <a class="nav-link" style="color: #000;" href="">Multimedia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="{{ route('register') }}">Appointments</a>
+                        <a class="nav-link" style="color: #000;" href="">Appointments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color: #000;" href="{{ route('coach.index') }}">Coachs</a>
@@ -30,7 +30,7 @@
                         <a class="nav-link" style="color: #000;" href="{{ route('login') }}">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="{{ route('login') }}">Logout</a>
+                        <a class="nav-link" style="color: #000;" href="{{ route('logout') }}">Logout</a>
                     </li>
                 </ul>
             </div>
