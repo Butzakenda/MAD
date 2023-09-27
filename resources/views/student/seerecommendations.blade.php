@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-<!-- @section('content') -->
+@section('content')
+@include('partials.search-bar')
 <div class="container">
-    @include('partials.search-bar')
     <div class="d-flex justify-content-center mt-2">
         <h1>{{ __('Recommendations') }}</h1>
     </div>
@@ -26,3 +26,4 @@
         </div>
     </div>
 </div>
+@endsection
