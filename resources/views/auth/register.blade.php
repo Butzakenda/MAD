@@ -168,9 +168,9 @@
                                 <h6>Already have an account? Log In</h6>
                             </div>
                             <div class="align-bottom">
-                                <button type="submit" class="btn btn-primary">
+                                <a class="btn btn-primary" href="{{ route('login') }}">
                                     {{ __('Log In') }}
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </form>
