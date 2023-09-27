@@ -4,7 +4,7 @@
 <div class="container">
     @include('partials.search-bar')
     <div class="d-flex justify-content-center mt-2">
-        <h1>{{ __('Multimedia') }}</h1>
+        <h1>{{ __('Appointments') }}</h1>
     </div>
     <div class="d-flex justify-content-center flex-wrap gap-5 mt-5">
         <div class="card" style="width: 250px;">
