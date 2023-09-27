@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/student/news');
+    return view('/coach/formredatecoach');
 });
 
 //Coach
