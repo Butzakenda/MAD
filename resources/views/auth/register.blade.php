@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('partials.nav')
 
 @section('content')
 <div class="container">
@@ -198,4 +199,8 @@
         </div>
     </div>
 </div>
+
+
+
+
 @endsection
