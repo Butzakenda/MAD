@@ -6,6 +6,7 @@
     <div class="d-flex justify-content-center mt-2">
         <h1>{{ __('Multimedia') }}</h1>
     </div>
+    @include('partials.formNewMultimediaButton')
     <div class="d-flex justify-content-center flex-wrap gap-5 mt-5">
         <div class="card" style="width: 250px;">
             <img src="..." class="card-img-top" alt="...">
@@ -16,6 +17,7 @@
             <div class="px-2 d-flex justify-content-end">
                 <p class="">Price</p>
             </div>
+            @include('partials.formNewMultimediaEditAndDelete')
         </div>
     </div>
 </div>

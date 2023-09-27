@@ -1,7 +1,6 @@
 @extends('layouts.app')
-@include('partials.nav')
 
-
+@section('content')
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
     <div class="card">
         <div class="card-body">
