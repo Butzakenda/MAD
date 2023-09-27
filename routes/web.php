@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/student/formredatecoach');
+    return view('/welcome');
 });
+//Coach
+Route::get('index/coach', 'CoachController@index')->name('coach.index');
+Route::post('create/coach', 'CoachController@create')->name('coach.create');
 
 Auth::routes();
 Route::middleware(['web'])->group(function () {
