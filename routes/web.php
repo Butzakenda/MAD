@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/admin/formNewCoach');
+    return view('/welcome');
 });
 //Coach
 Route::get('index/coach', 'CoachController@index')->name('coach.index');
