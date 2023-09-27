@@ -14,10 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/student/seerecommendations');
 });
 
 Auth::routes();
-
+Route::middleware(['web'])->group(function () {
+    // Aquí van las rutas de autenticación
+    //Register
+        Route::post('registro', 'App\Http\Controllers\Auth\RegisterController@create')->name('register');
+    //--------
+    //Login
+        Route::post('/login', 'Auth\LoginController@login');
+        Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+    //--------
+    //logout
+        Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+    //--------
+});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

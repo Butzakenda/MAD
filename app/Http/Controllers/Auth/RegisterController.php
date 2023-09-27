@@ -8,7 +8,10 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Http\Request; 
+use App\Models\Estudiante;
+use App\Models\Lenguaje;
+use Illuminate\Support\Facades\App;
 class RegisterController extends Controller
 {
     /*
@@ -52,7 +55,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'confirmed'],
         ]);
     }
 
@@ -60,14 +63,39 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\Models\User
+     * @return \App\Models\Estudiante
      */
-    protected function create(array $data)
+    protected function create(Request $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        App::setLocale('es');
+        $validator = $this->validator($request->all()); // Pasa $request->all() en lugar de $request
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        } else {
+            /* dd($request); */
+            $user = User::create([
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'password' => Hash::make($request->input('password')),
+            ]);
+
+            $selectedLanguages = $request->input('languages', []);
+            $estudiante = Estudiante::create([
+                'Nombres' => $request->input('name'),
+                'Apellidos' => $request->input('lastname'),
+                'CorreoElectronico' => $request->input('email'),
+                'Sexo' => $request->input('sex'),
+                'PreferenciasEducativas' => $request->input('PreferenciasEducativas'),
+                'Carrera' => $request->input('carrer'),
+                'Lenguaje' => $request->input('lenguajes'),
+                'user_id' => $user->id, // Asignar el ID del usuario al campo user_id
+            ]);
+            
+        }
+
+        return view('auth.login');
     }
+
+
 }
