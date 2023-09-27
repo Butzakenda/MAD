@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/student/formCoach');
+    return view('/admin/formNewCoach');
 });
 
 Auth::routes();
