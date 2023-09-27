@@ -17,6 +17,16 @@ Route::get('/', function () {
     return view('/student/news');
 });
 
+//Coach
+Route::get('index/coach', 'CoachController@index')->name('coach.index');
+Route::get('index/coach', 'CoachController@index')->name('coach.index');
+
+// multimedia
+Route::get('index/multimedia', 'MultimediaController@index')->name('multimedia.index');
+
+
+Route::post('create/coach', 'CoachController@create')->name('coach.create');
+
 Auth::routes();
 Route::middleware(['web'])->group(function () {
     // Aquí van las rutas de autenticación
