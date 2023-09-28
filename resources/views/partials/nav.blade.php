@@ -14,16 +14,16 @@
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav ml-auto">
-                    
+
                     <li class="nav-item">
                             <a class="nav-link" style="color: #000;" href="{{ route('multimedia.index') }}">Multimedia</a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link" style="color: #000;" href="{{ route('register') }}">Appointments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="{{ route('coach.index') }}">Coachs</a>
+                        <a class="nav-link" style="color: #000;" href="{{ route('coach.list') }}">Coachs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color: #000;" href="{{ route('login') }}">Recomendations</a>
@@ -31,7 +31,7 @@
                     <li class="nav-item">
                         <a class="nav-link" style="color: #000;" href="{{ route('login') }}">News</a>
                     </li>
-                    
+
                     @auth
                     <div class="dropdown mt-3">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
@@ -60,7 +60,7 @@
                         <a class="nav-link" style="color: #000;" href="{{ route('register.show') }}">Register</a>
                     </li>
                     @endauth
-                    
+
                 </ul>
             </div>
         </div>

@@ -6,7 +6,15 @@
     <div class="d-flex justify-content-center mt-2">
         <h1>{{ __('Coachs') }}</h1>
     </div>
-    @include('partials.formNewCoachButton')
+    @if(Auth::user()->tipo == 'Administrador')
+    <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
+        <a href="{{route('coach.index')}}">
+            <button type="button" class="btn btn-success">
+                New Coach
+            </button>
+        </a>
+    </div>
+    @endif
     <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
         <table class="table table-striped table-hover border">
             <thead>

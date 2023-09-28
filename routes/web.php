@@ -20,13 +20,14 @@ Route::get('/', function () {
 
 //Coach
 Route::get('index/coach', 'CoachController@index')->name('coach.index');
-Route::get('index/coach', 'CoachController@index')->name('coach.index');
+Route::post('create/coach', 'CoachController@create')->name('coach.create');
+Route::get('list/coach', 'CoachController@showListCoach')->name('coach.list');
+
 
 // multimedia
 Route::get('index/multimedia', 'MultimediaController@index')->name('multimedia.index');
 
 
-Route::post('create/coach', 'CoachController@create')->name('coach.create');
 
 Auth::routes();
 Route::middleware(['web'])->group(function () {

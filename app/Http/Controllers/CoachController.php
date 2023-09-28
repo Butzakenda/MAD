@@ -16,6 +16,11 @@ class CoachController extends Controller
         //
         return view ('admin.formNewCoach');
     }
+    public function showListCoach()
+    {
+        //
+        return view ('student.coachs');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -23,21 +28,21 @@ class CoachController extends Controller
     public function create(Request $request)
     {
         //
-        
+
         $user = User::create([
             'name' => $request->input('nombreCoach'),
             'email' => $request->input('emailCoach'),
             'password' => Hash::make($request->input('passwordCoach')),
             'tipo' => 'Coach'
         ]);
-        
+
         Coach::create([
             'user_id' => $user->id,
             'Nombres' => $request->input('nombreCoach'),
             'Apellidos' => $request->input('apellidoCoach'),
             'CorreoElectronico' => $request->input('emailCoach'),
             'Sexo' => $request->input('sexCoach'),
-        ]); 
+        ]);
         return view ('welcome');
     }
 
