@@ -12,10 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         //
-        Schema::create('lenguajes', function (Blueprint $table) {
-            $table->id('IdLenguaje');
-            $table->string('name');
-            $table->timestamps();
+        Schema::table('Coaches', function (Blueprint $table) {
+            $table->string('Lenguaje');
+            $table->string('LearningWay');
         });
     }
 
@@ -25,6 +24,10 @@ return new class extends Migration
     public function down(): void
     {
         //
-        Schema::dropIfExists('lenguajes');
+        Schema::table('Coaches', function (Blueprint $table) {
+            $table->dropColumn('Lenguaje');
+            $table->dropColumn('LearningWay');
+        });
+        
     }
 };

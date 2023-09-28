@@ -14,7 +14,6 @@
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav ml-auto">
-
                     <li class="nav-item">
                             <a class="nav-link" style="color: #000;" href="{{ route('multimedia.index') }}">Multimedia</a>
                     </li>
@@ -23,7 +22,9 @@
                         <a class="nav-link" style="color: #000;" href="{{ route('register') }}">Appointments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="{{ route('coach.list') }}">Coachs</a>
+                        <a class="nav-link" style="color: #000;" href="{{ route('coach.list') }}">
+                            Coachs
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color: #000;" href="{{ route('login') }}">Recomendations</a>
@@ -48,8 +49,8 @@
                             @csrf
                         </form>
                     </li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Actualizar perfil</a></li>
+                    
                     </ul>
                 </div>
                     @else

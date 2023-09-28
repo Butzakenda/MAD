@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Http\Request;
+use App\Models\Administrador;
 use App\Models\User;
-use App\Models\Coach;
-class CoachController extends Controller
+class AdministratorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,14 +15,7 @@ class CoachController extends Controller
     public function index()
     {
         //
-        return view ('admin.formNewCoach');
-    }
-    public function showListCoach()
-    {
-        //
-        $coach = Coach::orderBy('Nombres','ASC')->get();
-        /* dd($coach); */
-        return view ('student.coachs',compact('coach'));
+        return view ('admin.formNewAdmin');
     }
 
     /**
@@ -30,22 +24,21 @@ class CoachController extends Controller
     public function create(Request $request)
     {
         //
-        /* dd($request); */
+        /* dd($request);  */       
         $user = User::create([
-            'name' => $request->input('nombreCoach'),
-            'email' => $request->input('emailCoach'),
-            'password' => Hash::make($request->input('passwordCoach')),
-            'tipo' => 'Coach'
+            'name' => $request->input('nombreAdmin'),
+            'email' => $request->input('emailAdmin'),
+            'password' => Hash::make($request->input('passwordAdmin')),
+            'tipo' => 'Administrador'
         ]);
 
-        Coach::create([
+        Administrador::create([
             'user_id' => $user->id,
-            'Nombres' => $request->input('nombreCoach'),
-            'Apellidos' => $request->input('apellidoCoach'),
-            'CorreoElectronico' => $request->input('emailCoach'),
-            'Sexo' => $request->input('sexCoach'),
-            'Lenguaje' => $request->input('lenguajesCoach'),
-            'LearningWay' => $request->input('LearningWay'),
+            'Nombres' => $request->input('nombreAdmin'),
+            'Apellidos' => $request->input('apellidoAdmin'),
+            'CorreoELectronico' => $request->input('emailAdmin'),
+            'Sexo' => $request->input('sexAdmin'),
+            
         ]);
         return back();
     }

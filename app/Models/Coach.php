@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Coach extends Model
 {
-    protected $fillable = ['user_id','Nombres','Apellidos','CorreoElectronico','Sexo'];
+    protected $fillable = ['user_id','Nombres','Apellidos','CorreoElectronico','Sexo','Lenguaje','LearningWay'];
     protected $primaryKey = 'IdCoach';
     
     public function user()
