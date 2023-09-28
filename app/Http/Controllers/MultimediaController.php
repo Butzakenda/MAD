@@ -29,6 +29,12 @@ class MultimediaController extends Controller
         return view('student.seeMultimedia');
     }
 
+    public function editmultimedia()
+    {
+        //
+        return view('admin.formEditMultimedia');
+    }
+
     /**
      * Store a newly created resource in storage.
      */

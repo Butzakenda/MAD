@@ -20,13 +20,18 @@ class AppointmentsController extends Controller
         return view('student.appointments');
     }
 
+    public function editappointment()
+    {
+        //
+        return view('student.formReDateCoach');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
         //
-        return view('student.formReDateCoach');
     }
 
     /**

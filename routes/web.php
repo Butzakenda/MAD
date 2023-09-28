@@ -22,10 +22,11 @@ Route::get('/', function () {
 Route::get('index/multimedia', 'MultimediaController@index')->name('multimedia.index');
 Route::get('create/multimedia', 'MultimediaController@create')->name('multimedia.create');
 Route::get('see/multimedia', 'MultimediaController@see')->name('multimedia.see');
+Route::get('edit/multimedia', 'MultimediaController@editmultimedia')->name('multimedia.edit');
 
 // Appointments
 Route::get('list/appointments', 'AppointmentsController@list')->name('appointment.list');
-Route::get('create/appointments', 'AppointmentsController@create')->name('appointment.create');
+Route::get('edit/appointments', 'AppointmentsController@editappointment')->name('appointment.edit');
 
 //Coach
 Route::get('index/coach', 'CoachController@index')->name('coach.index');
