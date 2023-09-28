@@ -27,12 +27,13 @@ Route::get('edit/multimedia', 'MultimediaController@editmultimedia')->name('mult
 // Appointments
 Route::get('list/appointments', 'AppointmentsController@list')->name('appointment.list');
 Route::get('edit/appointments', 'AppointmentsController@editappointment')->name('appointment.edit');
+Route::post('create/appointments/{id}', 'AppointmentsController@create')->name('appoinment.create');
 
 //Coach
 Route::get('index/coach', 'CoachController@index')->name('coach.index');
 Route::post('create/coach', 'CoachController@create')->name('coach.create');
 Route::get('list/coach', 'CoachController@showListCoach')->name('coach.list');
-Route::get('schedule/coach', 'CoachController@schedule')->name('coach.schedule');
+Route::get('schedule/coach/{id}', 'AppointmentsController@list')->name('coach.schedule');
 //Administrator
 Route::get('index/admin', 'AdministratorController@index')->name('admin.index');
 Route::post('create/admin', 'AdministratorController@create')->name('admin.create');

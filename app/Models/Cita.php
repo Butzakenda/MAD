@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cita extends Model
 {
-    protected $fillable = ['IdEstudiante','IdCoach','Duracion','Estado','FechaHoraInicio','FechaHoraFin'];
+    protected $fillable = ['IdEstudiantes','IdCoach','Duracion','Estado','FechaHoraInicio','FechaHoraFin'];
     protected $primaryKey = 'IdCita';
     
     public function user()

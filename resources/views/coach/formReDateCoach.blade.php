@@ -7,6 +7,7 @@
         <div class="card-body">
             <h5 class="card-title">Re-Schedule an Appointment</h5>
             <form>
+                
                 <div class="row">
                     <div class="col">
                         <input type="text" class="form-control" placeholder="Coach" name="">

@@ -14,13 +14,13 @@ return new class extends Migration
         //
         Schema::create('Citas', function (Blueprint $table) {
             $table->id('IdCita');
-            $table->unsignedBigInteger('IdEstudiante');
+            $table->unsignedBigInteger('IdEstudiantes');
             $table->unsignedBigInteger('IdCoach');
             $table->string('Duracion', 250);
             $table->string('Estado', 250);
             $table->Date('FechaHoraInicio');
             $table->Date('FechaHoraFin')->nullable();
-
+            $table->timestamps();
         });
     }
 
