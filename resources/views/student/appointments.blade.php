@@ -13,7 +13,7 @@
         <table class="table table-striped table-hover border">
             <thead>
                 <tr>
-                    
+
                     <th scope="col">Name</th>
                     <th scope="col">Learning Way</th>
                     <th scope="col">Coach</th>
@@ -23,12 +23,12 @@
                 </tr>
             </thead>
             <tbody>
-                
+
                 @foreach ($citas as $cita)
                 <tr>
                     {{-- {{dd($cita->estudiante->Nombres)}} --}}
-                    
-                    
+
+
                         <td>{{$cita->estudiante->Nombres}} </td>
                         <td>{{($cita->coach->LearningWay)}}</td>
                         <td>{{($cita->coach->Nombres)}}</td>
@@ -51,11 +51,11 @@
                         </td>
                         <td>
                             <p>No tienes citas</p>
-                        </td>                                                 
+                        </td>
                 </tr>
                 @endforeach
-                
-                
+
+
             </tbody>
         </table>
     </div>
