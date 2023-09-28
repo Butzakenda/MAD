@@ -24,6 +24,12 @@ class CoachController extends Controller
         return view ('student.coachs',compact('coach'));
     }
 
+    public function schedule()
+    {
+        //
+        return view ('student.formDateCoach');
+    }
+
     /**
      * Show the form for creating a new resource.
      */

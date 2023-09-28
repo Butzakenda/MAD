@@ -6,7 +6,15 @@
     <div class="d-flex justify-content-center mt-2">
         <h1>{{ __('News') }}</h1>
     </div>
-    @include('partials.formNewCoachButton')
+    @if(Auth::user()->tipo == 'Administrador')
+    <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
+        <a href="{{route('new.create')}}">
+            <button type="button" class="btn btn-success">
+                Create New
+            </button>
+        </a>
+    </div>
+    @endif
     <div class="d-flex justify-content-center flex-wrap gap-5 mt-5">
         <div class="card" style="width: 250px;">
             <img src="..." class="card-img-top" alt="...">
