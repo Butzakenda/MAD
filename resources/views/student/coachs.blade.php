@@ -6,6 +6,7 @@
     <div class="d-flex justify-content-center mt-2">
         <h1>{{ __('Coachs') }}</h1>
     </div>
+    @auth
     @if(Auth::user()->tipo == 'Administrador')
     <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
         <a href="{{route('coach.index')}}">
@@ -20,6 +21,7 @@
         </a>
     </div>
     @endif
+    @endauth
     <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
         <table class="table table-striped table-hover border">
             <thead>
@@ -30,15 +32,16 @@
                     <th scope="col">Schedule Appointment</th>
                 </tr>
             </thead>
-            
+
             @forelse ($coach as $coachI)
-            
+
             <tbody>
                 <tr>
                     <th scope="row">{{$coachI->IdCoach}}</th>
                     <td>{{$coachI->Nombres}}</td>
                     <td>{{$coachI->LearningWay}}</td>
                     <td>
+                        @auth
                         <a href="{{route('coach.schedule', $coachI->IdCoach, Auth::user()->id)}}">
                             <button type="button" class="btn btn-success">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
@@ -47,13 +50,16 @@
                                 Schedule
                             </button>
                         </a>
+                        @else
+                        <h6>You must log in!</h6>
+                        @endauth
                     </td>
-                </tr>              
+                </tr>
             </tbody>
             @empty
             <p>Datos no encontrados</p>
             @endforelse
-            
+
         </table>
     </div>
 </div>
