@@ -20,7 +20,8 @@ Route::get('/', function () {
 
 // Multimedia
 Route::get('index/multimedia', 'MultimediaController@index')->name('multimedia.index');
-Route::get('create/multimedia', 'MultimediaController@create')->name('multimedia.create');
+Route::get('show/multimedia/create', 'MultimediaController@showCreateMultimedia')->name('multimedia.show');
+Route::post('create/multimedia', 'MultimediaController@create')->name('multimedia.create');
 Route::get('see/multimedia', 'MultimediaController@see')->name('multimedia.see');
 Route::get('edit/multimedia', 'MultimediaController@editmultimedia')->name('multimedia.edit');
 

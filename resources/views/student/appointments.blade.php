@@ -27,8 +27,6 @@
                 @foreach ($citas as $cita)
                 <tr>
                     {{-- {{dd($cita->estudiante->Nombres)}} --}}
-                    
-                    
                         <td>{{$cita->estudiante->Nombres}} </td>
                         <td>{{($cita->coach->LearningWay)}}</td>
                         <td>{{($cita->coach->Nombres)}}</td>
@@ -49,9 +47,7 @@
                                 </svg>
                             </button>
                         </td>
-                        <td>
-                            <p>No tienes citas</p>
-                        </td>                                                 
+                                                                         
                 </tr>
                 @endforeach
                 

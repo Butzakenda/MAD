@@ -6,30 +6,34 @@
     <div class="d-flex justify-content-center mt-2">
         <h1>{{ __('Multimedia') }}</h1>
     </div>
-    @if(Auth::user()->tipo == 'Administrador')
-    <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
-        <h6>Upload Multimedia</h6>
-    </div>
-    <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
-        <a href="{{route('multimedia.create')}}">
-            <button type="button" class="btn btn-success">
-                Upload
-            </button>
-        </a>
-    </div>
+    
+    @if (Auth::user()->tipo=='Administrador')
+        <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
+            <h6>Upload Multimedia</h6>
+        </div>
+        <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
+            <a href="{{route('multimedia.show')}}">
+                <button type="button" class="btn btn-success">
+                    Upload
+                </button>
+            </a>
+        </div>
     @endif
+    @foreach ($multimedia as $multi)
     <div class="d-flex justify-content-center flex-wrap gap-5 mt-5">
         <div class="card" style="width: 250px;">
             <a href="{{route('multimedia.see')}}">
                 <img src="..." class="card-img-top" alt="...">
             </a>
             <div class="px-2 pt-2 d-flex justify-content-between">
-                <p class="">Title</p>
-                <p class="">Duration</p>
-            </div>
-            <div class="px-2 d-flex justify-content-end">
-                <p class="">Price</p>
-            </div>
+                <p class="">Title: {{$multi->Nombres}}</p>
+                <p class="">Description: {{$multi->Descripcion}}</p>
+                <p class="">Tipo: {{$multi->Tipo}}</p>
+                <p class="">Idiom: {{$multi->Idioma}}</p>
+                <p class="">Languaje: {{$multi->Lenguaje}}</p>
+                <p class="">Technology: {{$multi->Tecnologia}}</p>
+                <p class="">Price: {{$multi->Tecnologia}}</p>
+            </div>  
             @if(Auth::user()->tipo == 'Administrador')
             <div class="px-2 pt-2 d-flex justify-content-center grid gap-2">
                 <a href="{{route('multimedia.edit')}}">
@@ -48,6 +52,8 @@
             </div>
             @endif
         </div>
-    </div>
+    </div> 
+    @endforeach
+    
 </div>
 @endsection
