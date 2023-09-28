@@ -13,7 +13,7 @@
         <table class="table table-striped table-hover border">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    
                     <th scope="col">Name</th>
                     <th scope="col">Learning Way</th>
                     <th scope="col">Coach</th>
@@ -49,14 +49,9 @@
                                 </svg>
                             </button>
                         </td>
-
-                    
                         <td>
                             <p>No tienes citas</p>
-                        </td>
-                    
-                   
-                    
+                        </td>                                                 
                 </tr>
                 @endforeach
                 
