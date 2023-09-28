@@ -9,7 +9,7 @@ class Multimedia extends Model
 {
     protected $fillable = ['IdRecomendaciones','IdAdministrador','Nombres','Descripcion','Tipo', 'Idioma','Estado','Duracion','Lenguaje','Tecnologia','Precio','Certificado','Imagen','Video','FechaInicio','FechaFin'];
     protected $primaryKey = 'IdMultimedia';
-    
+    protected $table = 'Multimedias';
     public function recomendacion()
     {
         return $this->belongsTo(Recomendacion::class, 'IdRecomendaciones');

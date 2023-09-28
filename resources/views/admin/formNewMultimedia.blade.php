@@ -7,43 +7,56 @@
         <div class="card-body text-center">
             <br>
             <h5 class="card-title">Create a New Post</h5>
-            <form>
+            <form method="POST" action=" {{route('multimedia.create')}} ">
+                @csrf
                 <div class="row">
                     <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Título" name="Nombres" id="Nombres">
+                        Title: <input type="text" class="form-control" placeholder="Título" name="Nombres" id="Nombres">
                     </div>
                     <div class="col-md-4">
-                        <input type="file" class="form-control" placeholder="Imagen" name="Imagen" id="Imagen">
-                    </div>
-                    <div class="col-md-4">
-                        <input type="datetime-local" class="form-control" placeholder="FechaInicio" name="FechaInicio" id="FechaInicio">
+                        Begins at: <input type="datetime-local" class="form-control" placeholder="FechaInicio" name="FechaInicio" id="FechaInicio">
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-4">
-                        <input type="datetime-local" class="form-control" placeholder="FechaFin" name="FechaFin" id="FechaFin">
+                        Ends at: <input type="datetime-local" class="form-control" placeholder="FechaFin" name="FechaFin" id="FechaFin">
                     </div>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Tecnologia" name="Tecnologia" id="Tecnologia">
+                        Technology: <input type="text" class="form-control" placeholder="Tecnologia" name="Tecnologia" id="Tecnologia">
                     </div>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Precio" name="Precio" id="Precio">
+                        Price: <input type="text" class="form-control" placeholder="Precio" name="Precio" id="Precio">
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-4">
+                        Multimedia: 
                         <select class="form-control" name="Tipo" id="Tipo">
                             <option value="channel">Channel</option>
                             <option value="course">Course</option>
-                            <option value="video">Video</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        Idioma: 
+                        <select class="form-control" name="Idioma" id="Idioma">
+                            <option value="English">English</option>
+                            <option value="Spanish">Spanish</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        Estado: 
+                        <select class="form-control" name="Estado" id="Estado">
+                            <option value="English">Active</option>
+                            <option value="Spanish">Soonly</option>
                         </select>
                     </div>
                     <div class="col-md-8">
-                        <textarea class="form-control" placeholder="Descripción" name="Descripcion" id="Descripcion"></textarea>
+                        Description: <textarea class="form-control" placeholder="Descripción" name="Descripcion" id="Descripcion"></textarea>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-4">
+                        Lenguaje:
                         <select class="form-control" name="Lenguaje"  id="Lenguaje">
                             <option value="Python">Python</option>
                             <option value="Javascript">Javascript</option>
