@@ -37,9 +37,10 @@ Route::get('schedule/coach', 'CoachController@schedule')->name('coach.schedule')
 Route::get('list/recommendations', 'RecommendationsController@list')->name('recommendation.list');
 Route::get('see/recommendations', 'RecommendationsController@see')->name('recommendation.see');
 
-
 // News
 Route::get('list/news', 'NewsController@list')->name('new.list');
+Route::get('create/news', 'NewsController@create')->name('new.create');
+
 
 
 
