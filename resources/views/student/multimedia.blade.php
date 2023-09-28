@@ -20,9 +20,8 @@
         </div>
         @endif
     @endauth
-
-    @foreach ($multimedia as $multi)
     <div class="d-flex justify-content-center flex-wrap gap-5 mt-5">
+        @foreach ($multimedia as $multi)
         <div class="card" style="width: 250px;">
             <a href="{{route('multimedia.see')}}">
                 <img src="..." class="card-img-top" alt="...">
@@ -56,8 +55,8 @@
                 @endif
             @endauth
         </div>
+        @endforeach
     </div>
-    @endforeach
 
 </div>
 @endsection
