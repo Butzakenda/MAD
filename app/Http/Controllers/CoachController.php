@@ -19,7 +19,9 @@ class CoachController extends Controller
     public function showListCoach()
     {
         //
-        return view ('student.coachs');
+        $coach = Coach::orderBy('Nombres','ASC')->get();
+        /* dd($coach); */
+        return view ('student.coachs',compact('coach'));
     }
 
     /**
@@ -43,7 +45,7 @@ class CoachController extends Controller
             'CorreoElectronico' => $request->input('emailCoach'),
             'Sexo' => $request->input('sexCoach'),
         ]);
-        return view ('welcome');
+        return back();
     }
 
     /**

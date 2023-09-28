@@ -17,6 +17,7 @@
     @endif
     <div class="d-flex justify-content-center flex-wrap gap-5 mt-3">
         <table class="table table-striped table-hover border">
+            @foreach ($coach as $coachI)
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -28,7 +29,7 @@
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Name</td>
+                    <td>{{$coachI->Nombres}}</td>
                     <td>Learning Way</td>
                     <td>
                         <button type="button" class="btn btn-success">
@@ -66,6 +67,8 @@
                     </td>
                 </tr>
             </tbody>
+            @endforeach
+            
         </table>
     </div>
 </div>
