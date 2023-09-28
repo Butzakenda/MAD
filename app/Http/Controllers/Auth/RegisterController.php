@@ -58,6 +58,10 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'confirmed'],
         ]);
     }
+    protected function showRegisterForm()
+    {
+        return view ('auth.register');
+    }
 
     /**
      * Create a new user instance after a valid registration.

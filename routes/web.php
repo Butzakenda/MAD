@@ -15,7 +15,7 @@ use App\Http\Controllers\Auth\LoginController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 //Coach
@@ -32,7 +32,8 @@ Auth::routes();
 Route::middleware(['web'])->group(function () {
     // Aquí van las rutas de autenticación
     //Register
-        //Route::post('registro', 'App\Http\Controllers\Auth\RegisterController@create')->name('register');
+        Route::post('registro', 'App\Http\Controllers\Auth\RegisterController@create')->name('register');
+        Route::get('registro/show', 'App\Http\Controllers\Auth\RegisterController@showRegisterForm')->name('register.show');
     //--------
     //Login
         Route::post('/login', 'Auth\LoginController@login');

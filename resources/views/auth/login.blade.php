@@ -56,7 +56,7 @@
                             <div class="col-md-8 offset-md-4">
                                 <br>
                                 <label for="">Si aún no tienes una cuenta, regístrate</label>
-                                <a id="btnSingUp" href="{{ route('register') }}" class="btn btn-outline-primary mr-auto">{{ __('Sing up') }}</a>
+                                <a id="btnSingUp" href="{{ route('register.show') }}" class="btn btn-outline-primary mr-auto">{{ __('Sing up') }}</a>
                             </div>
                         </div>
 
