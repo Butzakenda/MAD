@@ -10,13 +10,25 @@
             <form>
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Título" name="titulo">
+                        <input type="text" class="form-control" placeholder="Título" name="Nombres" id="Nombres">
                     </div>
                     <div class="col">
-                        <input type="file" class="form-control" placeholder="Imagen" name="imagen">
+                        <input type="file" class="form-control" placeholder="Imagen" name="Imagen" id="Imagen">
                     </div>
                     <div class="col">
-                        <select class="form-control" name="tipo">
+                        <input type="datetime-local" class="form-control" placeholder="FechaInicio" name="FechaInicio" id="FechaInicio">
+                    </div>
+                    <div class="col">
+                        <input type="datetime-local" class="form-control" placeholder="FechaFin" name="FechaFin" id="FechaFin">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Tecnologia" name="Tecnologia" id="Tecnologia">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Precio" name="Precio" id="Precio">
+                    </div>
+                    <div class="col">
+                        <select class="form-control" name="Tipo" id="Tipo">
                             <option value="channel">Channel</option>
                             <option value="course">Course</option>
                             <option value="video">Video</option>
@@ -25,13 +37,10 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Lenguajes" name="lenguajes">
+                        <textarea class="form-control" placeholder="Descripción" name="Descripcion" id="Descripcion"></textarea>
                     </div>
                     <div class="col">
-                        <textarea class="form-control" placeholder="Descripción" name="descripcion"></textarea>
-                    </div>
-                    <div class="col">
-                        <select class="form-control" name="lenguaje">
+                        <select class="form-control" name="Lenguaje"  id="Lenguaje">
                             <option value="Python">Python</option>
                             <option value="Javascript">Javascript</option>
                             <option value="C#">C#</option>
