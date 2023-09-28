@@ -14,4 +14,8 @@ class Coach extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+    public function cita()
+    {
+        return $this->hasMany(Cita::class,'IdCita');
+    }
 }

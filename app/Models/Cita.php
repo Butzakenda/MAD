@@ -10,8 +10,13 @@ class Cita extends Model
     protected $fillable = ['IdEstudiantes','IdCoach','Duracion','Estado','FechaHoraInicio','FechaHoraFin'];
     protected $primaryKey = 'IdCita';
     
-    public function user()
+    
+    public function estudiante()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(Estudiante::class, 'IdEstudiantes');
+    }
+    public function coach()
+    {
+        return $this->belongsTo(Coach::class, 'IdEstudiantes');
     }
 }

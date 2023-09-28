@@ -18,4 +18,9 @@ class Estudiante extends Model
     {
         return $this->belongsToMany(Lenguaje::class);
     }
+    public function cita()
+    {
+        return $this->hasMany(Cita::class,'IdCita');
+    }
+    
 }

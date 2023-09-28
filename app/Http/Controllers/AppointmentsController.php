@@ -58,7 +58,14 @@ class AppointmentsController extends Controller
     public function showAppList()
     {
         //
-        return view ('student.appointments');
+        $citas = Cita::orderBy('IdEstudiantes','ASC')
+        ->with('coach')
+        ->with('estudiante')
+        ->get();
+        $citasCoach = Cita::orderBy('IdCoach','ASC')
+        ->with('coach')
+        ->get();
+        return view ('student.appointments', compact('citas','citasCoach'));
     }
     public function store(Request $request)
     {
