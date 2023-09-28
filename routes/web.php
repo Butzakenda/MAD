@@ -25,6 +25,8 @@ Route::get('see/multimedia', 'MultimediaController@see')->name('multimedia.see')
 Route::get('edit/multimedia', 'MultimediaController@editmultimedia')->name('multimedia.edit');
 
 // Appointments
+
+Route::get('show/appointments', 'AppointmentsController@showAppList')->name('appointment.show');
 Route::get('list/appointments', 'AppointmentsController@list')->name('appointment.list');
 Route::get('edit/appointments', 'AppointmentsController@editappointment')->name('appointment.edit');
 Route::post('create/appointments/{id}', 'AppointmentsController@create')->name('appoinment.create');

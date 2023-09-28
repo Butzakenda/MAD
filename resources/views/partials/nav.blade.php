@@ -19,7 +19,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="{{ route('appointment.list') }}">Appointments</a>
+                        <a class="nav-link" style="color: #000;" href="{{ route('appointment.show') }}">Appointments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color: #000;" href="{{ route('coach.list') }}">

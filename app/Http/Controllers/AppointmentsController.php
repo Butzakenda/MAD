@@ -55,6 +55,11 @@ class AppointmentsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+    public function showAppList()
+    {
+        //
+        return view ('student.appointments');
+    }
     public function store(Request $request)
     {
         //
