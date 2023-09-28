@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\Coach;
-class CoachController extends Controller
+
+class RecommendationsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,42 +12,26 @@ class CoachController extends Controller
     public function index()
     {
         //
-        return view ('admin.formNewCoach');
-    }
-    public function showListCoach()
-    {
-        //
-        return view ('student.coachs');
     }
 
-    public function schedule()
+    public function list()
     {
         //
-        return view ('student.formDateCoach');
+        return view('student.recommendations');
+    }
+
+    public function see()
+    {
+        //
+        return view('student.seerecommendations');
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create()
     {
         //
-
-        $user = User::create([
-            'name' => $request->input('nombreCoach'),
-            'email' => $request->input('emailCoach'),
-            'password' => Hash::make($request->input('passwordCoach')),
-            'tipo' => 'Coach'
-        ]);
-
-        Coach::create([
-            'user_id' => $user->id,
-            'Nombres' => $request->input('nombreCoach'),
-            'Apellidos' => $request->input('apellidoCoach'),
-            'CorreoElectronico' => $request->input('emailCoach'),
-            'Sexo' => $request->input('sexCoach'),
-        ]);
-        return view ('welcome');
     }
 
     /**

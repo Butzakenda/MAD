@@ -18,14 +18,28 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+// Multimedia
+Route::get('index/multimedia', 'MultimediaController@index')->name('multimedia.index');
+Route::get('create/multimedia', 'MultimediaController@create')->name('multimedia.create');
+Route::get('see/multimedia', 'MultimediaController@see')->name('multimedia.see');
+
+// Appointments
+Route::get('list/appointments', 'AppointmentsController@list')->name('appointment.list');
+Route::get('create/appointments', 'AppointmentsController@create')->name('appointment.create');
+
 //Coach
 Route::get('index/coach', 'CoachController@index')->name('coach.index');
 Route::post('create/coach', 'CoachController@create')->name('coach.create');
 Route::get('list/coach', 'CoachController@showListCoach')->name('coach.list');
+Route::get('schedule/coach', 'CoachController@schedule')->name('coach.schedule');
+
+// Recommendations
+Route::get('list/recommendations', 'RecommendationsController@list')->name('recommendation.list');
+Route::get('see/recommendations', 'RecommendationsController@see')->name('recommendation.see');
 
 
-// multimedia
-Route::get('index/multimedia', 'MultimediaController@index')->name('multimedia.index');
+// News
+Route::get('list/news', 'NewsController@list')->name('new.list');
 
 
 

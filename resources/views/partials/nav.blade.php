@@ -20,16 +20,16 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="{{ route('register') }}">Appointments</a>
+                        <a class="nav-link" style="color: #000;" href="{{ route('appointment.list') }}">Appointments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color: #000;" href="{{ route('coach.list') }}">Coachs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="{{ route('login') }}">Recomendations</a>
+                        <a class="nav-link" style="color: #000;" href="{{ route('recommendation.list') }}">Recomendations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #000;" href="{{ route('login') }}">News</a>
+                        <a class="nav-link" style="color: #000;" href="{{ route('new.list') }}">News</a>
                     </li>
 
                     @auth

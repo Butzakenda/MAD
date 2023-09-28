@@ -4,14 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class MultimediaController extends Controller
+class AppointmentsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('student.multimedia');
+        //
+    }
+
+    public function list()
+    {
+        //
+        return view('student.appointments');
     }
 
     /**
@@ -20,13 +26,7 @@ class MultimediaController extends Controller
     public function create()
     {
         //
-        return view('admin.formNewMultimedia');
-    }
-
-    public function see()
-    {
-        //
-        return view('student.seeMultimedia');
+        return view('student.formReDateCoach');
     }
 
     /**
