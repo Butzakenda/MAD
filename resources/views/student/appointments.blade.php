@@ -49,9 +49,6 @@
                                 </svg>
                             </button>
                         </td>
-                        <td>
-                            <p>No tienes citas</p>
-                        </td>
                 </tr>
                 @endforeach
 
